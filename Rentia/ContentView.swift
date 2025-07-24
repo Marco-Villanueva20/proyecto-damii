@@ -17,17 +17,18 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 	
     var body: some View {
-        VStack{
-            Image(systemName: "globe")
-            .imageScale(.large)
-            .foregroundStyle(.tint)
-            Text("Hello, world!")
-                .padding()
-            Text("Items: \(items.count)")
-        }
-
-
-
+        ZStack {
+            Color.red
+            VStack(alignment: .center, spacing: 16){
+                Image(
+                    systemName: "globe"
+                ).imageScale(.large).foregroundStyle(.tint)
+                Text("Login").font(Font.title).bold()
+                
+            }.padding()
+            
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            	
     }
 
     private func addItem() {
