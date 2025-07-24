@@ -17,29 +17,17 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 	
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
+        VStack{
+            Image(systemName: "globe")
+            .imageScale(.large)
+            .foregroundStyle(.tint)
+            Text("Hello, world!")
+                .padding()
+            Text("Items: \(items.count)")
         }
+
+
+
     }
 
     private func addItem() {
