@@ -7,12 +7,36 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		B7AD0BAE2E31E92000F94E06 /* Rentia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rentia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7AD0BAE2E31E92000F94E06 /* Rentia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Rentia.app; path = "/Users/damii/Documents/Rentia/build/Debug-iphoneos/Rentia.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B7D6F1282E3200AD0069D0E5 /* Exceptions for "Rentia" folder in "Rentia" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Rentia.xcdatamodeld,
+			);
+			target = B7AD0BAD2E31E92000F94E06 /* Rentia */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		B7D6F1292E3200AD0069D0E5 /* Exceptions for "Rentia" folder in "Compile Sources" phase from "Rentia" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = B7AD0BAA2E31E92000F94E06 /* Sources */;
+			membershipExceptions = (
+				Rentia.xcdatamodeld,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B7AD0BB02E31E92000F94E06 /* Rentia */ = {
+		B7D6F1212E3200AD0069D0E5 /* Rentia */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B7D6F1282E3200AD0069D0E5 /* Exceptions for "Rentia" folder in "Rentia" target */,
+				B7D6F1292E3200AD0069D0E5 /* Exceptions for "Rentia" folder in "Compile Sources" phase from "Rentia" target */,
+			);
 			path = Rentia;
 			sourceTree = "<group>";
 		};
@@ -32,17 +56,16 @@
 		B7AD0BA52E31E92000F94E06 = {
 			isa = PBXGroup;
 			children = (
-				B7AD0BB02E31E92000F94E06 /* Rentia */,
-				B7AD0BAF2E31E92000F94E06 /* Products */,
+				B7D6F12A2E3200F30069D0E5 /* Components */,
+				B7D6F1212E3200AD0069D0E5 /* Rentia */,
 			);
 			sourceTree = "<group>";
 		};
-		B7AD0BAF2E31E92000F94E06 /* Products */ = {
+		B7D6F12A2E3200F30069D0E5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B7AD0BAE2E31E92000F94E06 /* Rentia.app */,
 			);
-			name = Products;
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -61,7 +84,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				B7AD0BB02E31E92000F94E06 /* Rentia */,
+				B7D6F1212E3200AD0069D0E5 /* Rentia */,
 			);
 			name = Rentia;
 			packageProductDependencies = (
@@ -95,7 +118,7 @@
 			mainGroup = B7AD0BA52E31E92000F94E06;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = B7AD0BAF2E31E92000F94E06 /* Products */;
+			productRefGroup = B7AD0BA52E31E92000F94E06;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

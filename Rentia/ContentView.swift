@@ -9,6 +9,8 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @State var correo = ""
+    @State var password = ""
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -17,17 +19,40 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 	
     var body: some View {
+       
         ZStack {
-            Color.red
+            Color.cyan
             VStack(alignment: .center, spacing: 16){
-                Image(
-                    systemName: "globe"
-                ).imageScale(.large).foregroundStyle(.tint)
-                Text("Login").font(Font.title).bold()
+                Image("login")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .scaledToFit()
                 
-            }.padding()
+                Text("Login").font(.system(.title)).bold()
             
-        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                TextField("Ingrese su correo", text: $correo)
+                    .keyboardType(.emailAddress)
+                    .padding(8)
+                    .background()
+                    .cornerRadius(16)
+                    .padding(.horizontal,6).onChange(of: correo){oldValue, newValue in
+                        //logica para ejecutar cada que se escribe
+                    }
+                SecureField("Ingrese su contraseña", text: $password)
+                    .padding(8)
+                    .background(.white)
+                    .cornerRadius(16)
+                    .padding(.horizontal, 6)
+                Button("Iniciar Sesion"){
+                    //acciones para hacer
+                }.padding()
+                    .bold()
+                    .background(Color(hue: 0.48, saturation: 0.968, brightness: 0.688))
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                
+            }.frame(width: 300, height: 400).padding().background(.blue)
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
             	
     }
 
